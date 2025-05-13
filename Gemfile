@@ -66,3 +66,5 @@ end
 gem 'devise'
 gem 'ransack'
 
+gem "ransack"
+gem "kaminari", "~> 1.2"
