@@ -15,4 +15,8 @@
     <strong class="block font-medium mb-1">Description:</strong>
     <%= product.description %>
   </div>
+  <%= button_to "Add to Cart",
+      add_to_cart_path(product),
+      method: :post,
+      class: "w-full sm:w-auto rounded-md px-3.5 py-2.5 bg-green-600 hover:bg-green-500 text-white font-medium" %>
 </div>
