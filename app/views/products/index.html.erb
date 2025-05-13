@@ -1,5 +1,16 @@
 <% content_for :title, "Products" %>
 
+<%= search_form_for @q, url: products_path, method: :get do |f| %>
+  <div class="my-6 flex w-full justify-center">
+    <%= f.search_field :name_cont,
+          placeholder: "商品名で検索",
+          class: "border rounded-l px-3 py-2 w-60" %>
+
+    <%= f.submit "Search",
+          class: "rounded-r bg-blue-600 text-white px-4" %>
+  </div>
+<% end %>
+
 <div class="w-full">
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
